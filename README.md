@@ -1,69 +1,140 @@
-# MySQL Data Cleaning & Project
 
-## 📌 Project Overview
-This project demonstrates data cleaning, transformation, and exploratory analysis using MySQL on the Superstore dataset.
+# MySQL Data Cleaning Project
 
-The goal is to turn raw transactional data into a clean, structured dataset ready for analysis.
+## Project Overview
+
+This project focuses on cleaning and preparing a raw Superstore dataset using MySQL.
+
+The goal of this project is to transform messy raw data into a clean and reliable dataset ready for analysis.
 
 ---
 
 ## Tools Used
 - MySQL Workbench
-- SQL (Data Cleaning & Analysis)
 
 ---
 
-## Dataset Structure
+## Dataset Information
 
-### Raw Data
-- Original unmodified Superstore dataset
+The dataset contains:
 
-### Cleaned Data
-- Standardized column names
-- Fixed data types
-- Removed duplicates
-- Validated data integrity
-
----
-
-## Data Cleaning Steps
-
-1. Removed duplicate records
-2. Standardized column names (snake_case format)
-3. Converted data types:
-   - Order Date → DATE
-   - Ship Date → DATE
-4. Checked and handled NULL values
+- Customer information
+- Product details
+- Sales records
+- Shipping information
+- Profit and discount data
 
 ---
 
-## Key SQL Tasks
+## Data Cleaning Process
 
-### Data Exploration
-- Checked dataset structure
-- Identified duplicates
-- Verified data types
-
-### Data Cleaning
-- Removed redundant columns
-- Standardized formatting
-- Fixed inconsistent values
-
-### Validation
-- Checked row integrity
-- Verified unique order-product combinations
+## Created a Staging Table
+A staging table named 'superstore_staging' was created to clean the data safely without changing the original raw dataset.
+Then the raw data was copied into the staging table.
 
 ---
+
+## Removed Duplicate Records
+Duplicates were identified using ROW_NUMBER() and deleted after verification.
+- Identified duplicate rows
+- Double checked records before deletion
+- Removed confirmed duplicates
+
+This helped ensure each row represented a valid transaction.
+
+---
+
+## Standardized the Data
+Several cleaning and formatting steps were performed to make the dataset consistent.
+- Converted text dates into real DATE format
+- Removed extra spaces using TRIM()
+- Fixed capitalization issues
+- Standardized product IDs
+- Fixed quotation mark formatting in product names
+- Rounded numeric values to 2 decimal places
+
+---
+
+## Converted Date Columns
+The following columns were converted from TEXT to DATE:
+- Order Date
+- Ship Date
+
+---
+
+## Checked for NULL and Missing Values
+Critical columns such as sales and order IDs were validated.
+
+---
+
+## Validated Data Integrity
+Several validation checks were performed to ensure data quality.
+- Verified shipping dates were not before order dates
+- Checked for negative sales values
+- Checked invalid quantities and discounts
+- Investigated repeated order IDs
+- Confirmed duplicate order IDs were caused by multiple products within the same order
+
+---
+
+## Renamed Columns
+Column names were standardized into cleaner snake_case format for better readability and professional SQL practices.
+
+---
+
+## Removed Irrelevant Columns
+The following columns were removed:
+- row_id
+- country
+
+Reason:
+- row_id had no analytical value
+- country contained only one value for all rows
+
+---
+
+## Final Result
+The dataset is now:
+- Cleaned
+- Standardized
+- Validated
+- Analysis-ready
+
+The final cleaned table is:
+- superstore_staging
 
 ## Project Structure
-See folder layout in repository.
+MySQL Data Cleaning Project/
+│
+├── data/
+│   ├── raw_superstore.csv
+│
+├── sql/
+│   └── data_cleaning.sql
+│
+├── README.md
+
+
+## Skills Demonstrated
+- Data Cleaning
+- Safe Data Cleaning By Using a Backup Table
+- SQL Querying
+- Identidying Duplicates
+- Handling Null and Missing Values
+- Standardizing Data
+- Recognizing Incorrect Data Types
+- Detecting Invalid Data
+- Documentation of My Data Cleaning Workflow
+- Attention to Detail
+- Problem Solving
 
 ---
 
-## Outcome
-The dataset is now clean, structured, and ready for advanced analysis or dashboarding.
+## Conclusion
+
+This project demonstrates the complete SQL data cleaning workflow using MySQL, from raw data preparation to final validated dataset creation.
 
 ---
 
-## 👤 Author
-Your Name
+## Author
+Jeycel Agustin
