@@ -1,16 +1,20 @@
 
 # MySQL Data Cleaning Project
 
+
 ## Project Overview
 
 This project focuses on cleaning and preparing a raw Superstore dataset using MySQL.
 
 The goal of this project is to transform messy raw data into a clean and reliable dataset ready for analysis.
 
+
 ---
+
 
 ## Tools Used
 - MySQL Workbench
+
 
 ---
 
@@ -28,13 +32,13 @@ The dataset contains:
 
 ## Data Cleaning Process
 
-## Created a Staging Table
+### 1. Created a Staging Table
 A staging table named 'superstore_staging' was created to clean the data safely without changing the original raw dataset.
 Then the raw data was copied into the staging table.
 
----
 
-## Removed Duplicate Records
+
+### 2. Removed Duplicate Records
 Duplicates were identified using ROW_NUMBER() and deleted after verification.
 - Identified duplicate rows
 - Double checked records before deletion
@@ -42,9 +46,9 @@ Duplicates were identified using ROW_NUMBER() and deleted after verification.
 
 This helped ensure each row represented a valid transaction.
 
----
 
-## Standardized the Data
+
+### 3. Standardized the Data
 Several cleaning and formatting steps were performed to make the dataset consistent.
 - Converted text dates into real DATE format
 - Removed extra spaces using TRIM()
@@ -53,21 +57,21 @@ Several cleaning and formatting steps were performed to make the dataset consist
 - Fixed quotation mark formatting in product names
 - Rounded numeric values to 2 decimal places
 
----
 
-## Converted Date Columns
+
+### 4. Converted Date Columns
 The following columns were converted from TEXT to DATE:
 - Order Date
 - Ship Date
 
----
 
-## Checked for NULL and Missing Values
+
+### 5. Checked for NULL and Missing Values
 Critical columns such as sales and order IDs were validated.
 
----
 
-## Validated Data Integrity
+
+### 6. Validated Data Integrity
 Several validation checks were performed to ensure data quality.
 - Verified shipping dates were not before order dates
 - Checked for negative sales values
@@ -75,14 +79,14 @@ Several validation checks were performed to ensure data quality.
 - Investigated repeated order IDs
 - Confirmed duplicate order IDs were caused by multiple products within the same order
 
----
 
-## Renamed Columns
+
+### 7. Renamed Columns
 Column names were standardized into cleaner snake_case format for better readability and professional SQL practices.
 
----
 
-## Removed Irrelevant Columns
+
+### 8. Removed Irrelevant Columns
 The following columns were removed:
 - row_id
 - country
@@ -103,6 +107,8 @@ The dataset is now:
 The final cleaned table is:
 - superstore_staging
 
+---
+
 ## Project Structure
 MySQL Data Cleaning Project/
 │
@@ -114,6 +120,7 @@ MySQL Data Cleaning Project/
 │
 ├── README.md
 
+---
 
 ## Skills Demonstrated
 - Data Cleaning
