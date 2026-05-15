@@ -9,14 +9,11 @@ This project focuses on cleaning and preparing a raw Superstore dataset using My
 The goal of this project is to transform messy raw data into a clean and reliable dataset ready for analysis.
 
 
----
-
 
 ## Tools Used
+
 - MySQL Workbench
 
-
----
 
 ## Dataset Information
 - Superstore Sales Dataset
@@ -30,7 +27,6 @@ The dataset contains:
 - Shipping information
 - Profit and discount data
 
----
 
 ## Data Cleaning Process
 
