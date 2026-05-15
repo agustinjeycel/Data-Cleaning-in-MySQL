@@ -19,6 +19,8 @@ The goal of this project is to transform messy raw data into a clean and reliabl
 ---
 
 ## Dataset Information
+- Superstore Sales Dataset
+- Source: Kaggle
 
 The dataset contains:
 
@@ -106,19 +108,6 @@ The dataset is now:
 
 The final cleaned table is:
 - superstore_staging
-
----
-
-## Project Structure
-MySQL Data Cleaning Project/
-│
-├── data/
-│   ├── raw_superstore.csv
-│
-├── sql/
-│   └── data_cleaning.sql
-│
-├── README.md
 
 ---
 
