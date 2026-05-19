@@ -31,7 +31,7 @@ The dataset contains:
 ## Data Cleaning Process
 
 ### 1. Created a Staging Table
-A staging table named 'superstore_staging' was created to clean the data safely without changing the original raw dataset.
+A staging table named 'superstore_cleaning' was created to clean the data safely without changing the original raw dataset.
 Then the raw data was copied into the staging table.
 
 
@@ -52,7 +52,6 @@ Several cleaning and formatting steps were performed to make the dataset consist
 - Removed extra spaces using TRIM()
 - Fixed capitalization issues
 - Standardized product IDs
-- Fixed quotation mark formatting in product names
 - Rounded numeric values to 2 decimal places
 
 
@@ -103,7 +102,7 @@ The dataset is now:
 - Analysis-ready
 
 The final cleaned table is:
-- superstore_staging
+- superstore_cleaned_data
 
 ---
 
